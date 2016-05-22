@@ -1,0 +1,15 @@
+{
+  "name": "generator-jrreact",
+  "version": "1.0.0",
+  "description": "React Yeoman generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "James Ravenscroft",
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.12.0",
+    "yeoman-generator": "^0.23.3"
+  }
+}
