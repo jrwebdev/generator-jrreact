@@ -27,7 +27,6 @@ module.exports = (config) => {
             postcss: webpackConfig.postcss,
             externals: {
                 'jsdom': 'window',
-                'cheerio': 'window',
                 'react/lib/ExecutionEnvironment': true,
                 'react/lib/ReactContext': true,
                 'react/addons': true

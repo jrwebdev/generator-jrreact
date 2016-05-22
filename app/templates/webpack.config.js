@@ -31,6 +31,9 @@ let config = {
         },{
             test: /\.scss$/,
             loader: 'style!css?sourceMap!postcss!sass?sourceMap'
+        },{
+            test: /\.json$/,
+            loader: 'json'
         }]
     },
     postcss: function () {
