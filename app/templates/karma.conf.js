@@ -25,6 +25,9 @@ module.exports = (config) => {
             devtool: 'inline-source-map',
             module: webpackConfig.module,
             postcss: webpackConfig.postcss,
+            resolve: {
+                extensions: ['', '.js', '.json']
+            },
             externals: {
                 'jsdom': 'window',
                 'react/lib/ExecutionEnvironment': true,
