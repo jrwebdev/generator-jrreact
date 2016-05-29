@@ -14,7 +14,7 @@ module.exports = (config) => {
         preprocessors: {
             'spec.js': ['webpack', 'sourcemap']
         },
-        browsers: ['Chrome'],
+        browsers: ['PhantomJS'],
         port: 9876,
         colors: true,
         logLevel: config.LOG_INFO,
