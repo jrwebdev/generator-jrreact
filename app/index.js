@@ -39,7 +39,7 @@ module.exports = generators.Base.extend({
             'README.md',
             'package.json',
             'webpack.config.js',
-            'src/style-mock.js',
+            'test/style-mock.js',
             'src/index.template.html',
             'src/app.js'
         ];
