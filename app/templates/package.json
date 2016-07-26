@@ -3,9 +3,18 @@
   "description": "<%= description %>",
   "version": "1.0.0",
   "scripts": {
-    "test": "karma start",
+    "test": "jest --watch",
+    "test:ci": "jest --coverage",
     "start": "webpack-dev-server --content-base=src/",
     "prebuild": "rimraf dist",
     "build": "cross-env NODE_ENV=production webpack -p"
+  },
+  "jest": {
+    "automock": false,
+    "verbose": true,
+    "moduleNameMapper": {
+      "^.+\\.(css|scss)$": "<rootDir>test/style-mock.js"
+    },
+    "rootDir": "./src"
   }
 }

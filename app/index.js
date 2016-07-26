@@ -35,11 +35,11 @@ module.exports = generators.Base.extend({
 
         let files = [
             ['gitignore', '.gitignore'],
+            '.babelrc',
             'README.md',
             'package.json',
             'webpack.config.js',
-            'karma.conf.js',
-            'spec.js',
+            'src/style-mock.js',
             'src/index.template.html',
             'src/app.js'
         ];
@@ -95,16 +95,8 @@ module.exports = generators.Base.extend({
             'cheerio',
             'rimraf',
             'cross-env',
-            'jasmine-core',
-            'phantomjs-prebuilt',
-            'karma',
-            'karma-phantomjs-launcher',
-            'karma-jasmine',
-            'karma-sourcemap-loader',
-            'karma-super-dots-reporter',
-            'karma-webpack',
-            'karma-logcapture-reporter',
-            'karma-mocha-reporter'
+            'jest-cli',
+            'jest-babel'
         ];
 
         this.npmInstall(deps, {'save': true});

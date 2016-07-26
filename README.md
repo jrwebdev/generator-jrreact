@@ -7,8 +7,7 @@ technologies based on personal preference:
 * Webpack
 * Babel
 * SASS
-* Karma
-* Jasmine
+* Jest
 * Enzyme
 
 ## Installation

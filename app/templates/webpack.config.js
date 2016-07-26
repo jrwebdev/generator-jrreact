@@ -15,16 +15,8 @@ let config = {
     module: {
         loaders: [{
             test: /\.js$/,
-            loader: 'react-hot',
+            loader: 'react-hot!babel',
             exclude: /node_modules/
-        },{
-            test: /\.js$/,
-            loader: 'babel',
-            exclude: /node_modules/,
-            query: {
-                presets: ['es2015', 'react'],
-                plugins: ['transform-object-rest-spread']
-            }
         },{
             test: /\.css$/,
             loader: 'style!css?sourceMap!postcss'
