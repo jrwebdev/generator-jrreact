@@ -76,6 +76,7 @@ module.exports = generators.Base.extend({
             'webpack-dev-server',
             'babel',
             'babel-core',
+            'babel-jest',
             'babel-loader',
             'babel-preset-es2015',
             'babel-plugin-transform-object-rest-spread',
@@ -95,8 +96,7 @@ module.exports = generators.Base.extend({
             'cheerio',
             'rimraf',
             'cross-env',
-            'jest-cli',
-            'jest-babel'
+            'jest-cli'
         ];
 
         this.npmInstall(deps, {'save': true});
