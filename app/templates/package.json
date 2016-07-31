@@ -13,7 +13,7 @@
     "automock": false,
     "verbose": true,
     "moduleNameMapper": {
-      "^.+\\.(css|scss)$": "<rootDir>test/style-mock.js"
+      "^.+\\.(css|scss)$": "<rootDir>../test/style-mock.js"
     },
     "rootDir": "./src"
   }
