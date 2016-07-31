@@ -6,7 +6,7 @@ technologies based on personal preference:
 * React
 * Webpack
 * Babel
-* SASS
+* Sass
 * Jest
 * Enzyme
 
