@@ -10,6 +10,12 @@ technologies based on personal preference:
 * Jest
 * Enzyme
 
+## Prerequisites
+
+```
+npm i -g yo
+```
+
 ## Installation
 
 ```
