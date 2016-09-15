@@ -39,6 +39,8 @@ module.exports = generators.Base.extend({
             'README.md',
             'package.json',
             'webpack.config.js',
+            '.eslintrc',
+            '.sass-lint.yml',
             'test/style-mock.js',
             'src/index.template.html',
             'src/app.js'
@@ -96,7 +98,14 @@ module.exports = generators.Base.extend({
             'cheerio',
             'rimraf',
             'cross-env',
-            'jest-cli'
+            'jest-cli',
+            'eslint',
+            'eslint-config-airbnb',
+            'eslint-plugin-import',
+            'eslint-plugin-jasmine',
+            'eslint-plugin-jsx-a11y',
+            'eslint-plugin-react',
+            'sass-lint'
         ];
 
         this.npmInstall(deps, {'save': true});
