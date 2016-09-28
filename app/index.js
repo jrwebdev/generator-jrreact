@@ -91,7 +91,7 @@ module.exports = generators.Base.extend({
             'node-sass',
             'sass-loader',
             'babel-preset-react',
-            'react-hot-loader',
+            'react-hot-loader@^1.3.0',
             'json-loader',
             'enzyme',
             'react-addons-test-utils',
