@@ -10,6 +10,8 @@ technologies based on personal preference:
 * Jest
 * Enzyme
 
+Also includes an npm script to deploy to Github pages (`npm run deploy`).
+
 ## Prerequisites
 
 ```
