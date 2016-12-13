@@ -21,7 +21,7 @@ npm i -g yo
 ## Installation
 
 ```
-npm i -g generator-jrrreact
+npm i -g generator-jrreact
 ```
 
 ## Usage
