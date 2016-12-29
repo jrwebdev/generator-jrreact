@@ -36,6 +36,7 @@ module.exports = class extends Generator {
       'package.json',
       'webpack.config.js',
       'postcss.config.js',
+      'browserslist',
       '.eslintrc',
       '.sass-lint.yml',
       'test/style-mock.js',

@@ -17,13 +17,14 @@ technologies based on personal preference:
 
 ¹ *ES6+ is not transpiled as this project is mainly for prototyping with Chrome. If you need to support multiple browsers,
 use [babel-preset-env](https://github.com/babel/babel-preset-env) and [babel-polyfill](https://babeljs.io/docs/usage/polyfill/)*<br>
-² *As above, Chrome is only supported, so Autoprefixer only generates prefixes for the last 2 versions of Chrome. If you
+² *As above, Autoprefixer only generates prefixes for the Chrome (last 2 versions). If you
 need to change this, update the `browserslist` file in the project root ([documentation](https://github.com/ai/browserslist)).*
 
 <hr>
 
 Other tools not included with this generator that I would recommend are:
 
+* [react-hot-loader](https://github.com/gaearon/react-hot-loader) (React hot reloading)
 * [react-router](https://github.com/ReactTraining/react-router) (routing)
 * [react-intl](https://github.com/yahoo/react-intl) (internationalisation)
 * [Redux](http://redux.js.org/docs/introduction/) or [MobX](https://github.com/mobxjs/mobx) (state management)
