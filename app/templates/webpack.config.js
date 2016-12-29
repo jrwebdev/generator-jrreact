@@ -90,24 +90,10 @@ if (process.env.NODE_ENV === 'production') {
 
   config.module.rules.push({
     test: /\.css$/,
-    use: [{
-      loader: 'style-loader'
-    }, {
-      loader: 'css-loader'
-    }, {
-      loader: 'postcss-loader',
-    }]
+    use: ['style-loader', 'css-loader', 'postcss-loader']
   }, {
     test: /\.scss$/,
-    use: [{
-      loader: 'style-loader'
-    }, {
-      loader: 'css-loader'
-    }, {
-      loader: 'postcss-loader'
-    }, {
-      loader: 'sass-loader'
-    }]
+    use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
   });
 
 }
