@@ -1,7 +1,6 @@
 'use strict'; // eslint-disable-line
 
 const webpack = require('webpack');
-const autoprefixer = require('autoprefixer');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path');
@@ -20,23 +19,19 @@ const config = {
     }
   },
   module: {
-    loaders: [{
+    rules: [{
       test: /\.js$/,
-      loader: 'react-hot!babel',
-      exclude: /node_modules/
+      exclude: /node_modules/,
+      use: 'babel-loader'
     }, {
       test: /\.json$/,
-      loader: 'json'
+      use: 'json-loader'
     }]
-  },
-  postcss() {
-    return [autoprefixer];
   },
   devServer: {
     historyApiFallback: true,
     hot: true,
     inline: true,
-    progress: true,
     port: 8080,
     stats: {
       hash: false,
@@ -62,34 +57,57 @@ const config = {
       hash: true
     }),
     new ExtractTextPlugin('styles.css')
-  ]
+  ],
+  performance: {
+    hints: false
+  }
 };
 
 if (process.env.NODE_ENV === 'production') {
 
-  config.module.loaders.push({
+  config.performance.hints = 'warning';
+
+  config.module.rules.push({
     test: /\.css$/,
-    loader: ExtractTextPlugin.extract('css')
+    loader: ExtractTextPlugin.extract({
+      loader: 'css-loader!postcss-loader'
+    })
   }, {
     test: /\.scss$/,
-    loader: ExtractTextPlugin.extract('css!sass')
+    loader: ExtractTextPlugin.extract({
+      loader: 'css-loader!sass-loader!postcss-loader'
+    })
   });
 
   config.output.path = path.join(__dirname, 'dist');
   config.devtool = false;
-  config.devServer = null;
+  delete config.devServer;
   config.plugins.push(new webpack.DefinePlugin({
     'process.env': {NODE_ENV: JSON.stringify('production')}
   }));
 
 } else {
 
-  config.module.loaders.push({
+  config.module.rules.push({
     test: /\.css$/,
-    loader: 'style!css?sourceMap!postcss'
+    use: [{
+      loader: 'style-loader'
+    }, {
+      loader: 'css-loader'
+    }, {
+      loader: 'postcss-loader',
+    }]
   }, {
     test: /\.scss$/,
-    loader: 'style!css?sourceMap!postcss!sass?sourceMap'
+    use: [{
+      loader: 'style-loader'
+    }, {
+      loader: 'css-loader'
+    }, {
+      loader: 'postcss-loader'
+    }, {
+      loader: 'sass-loader'
+    }]
   });
 
 }
