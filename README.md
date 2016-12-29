@@ -20,6 +20,8 @@ use [babel-preset-env](https://github.com/babel/babel-preset-env) and [babel-pol
 ² *As above, Chrome is only supported, so Autoprefixer only generates prefixes for the last 2 versions of Chrome. If you
 need to change this, update the `browserslist` file in the project root ([documentation](https://github.com/ai/browserslist)).*
 
+<hr>
+
 Other tools not included with this generator that I would recommend are:
 
 * [react-router](https://github.com/ReactTraining/react-router) (routing)
