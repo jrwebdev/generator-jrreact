@@ -97,7 +97,7 @@ module.exports = class extends Generator {
       'cheerio',
       'rimraf',
       'cross-env',
-      'jest-cli',
+      'jest',
       'eslint',
       'eslint-config-airbnb',
       'eslint-plugin-import',
