@@ -102,7 +102,7 @@ module.exports = class extends Generator {
       'eslint-config-airbnb',
       'eslint-plugin-import',
       'eslint-plugin-jasmine',
-      'eslint-plugin-jsx-a11y@^2',
+      'eslint-plugin-jsx-a11y',
       'eslint-plugin-react',
       'eslint-plugin-import',
       'sass-lint',
