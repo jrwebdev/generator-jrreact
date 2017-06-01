@@ -1,6 +1,6 @@
 {
   "name": "generator-jrreact",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "React Yeoman generator",
   "author": "James Ravenscroft <web@ravenscroft.io>",
   "license": "MIT",
