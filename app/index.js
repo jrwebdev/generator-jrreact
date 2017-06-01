@@ -36,7 +36,6 @@ module.exports = class extends Generator {
       'package.json',
       'webpack.config.js',
       'postcss.config.js',
-      'browserslist',
       '.eslintrc',
       '.sass-lint.yml',
       'test/style-mock.js',
@@ -73,8 +72,8 @@ module.exports = class extends Generator {
     ];
 
     let devDeps = [
-      'webpack@2.2.0-rc.3',
-      'webpack-dev-server@2.2.0-rc.0',
+      'webpack',
+      'webpack-dev-server',
       'css-loader',
       'style-loader',
       'postcss-loader',
@@ -86,15 +85,16 @@ module.exports = class extends Generator {
       'babel-plugin-transform-object-rest-spread',
       'babel-plugin-transform-class-properties',
       'babel-eslint',
+      'babel-preset-env',
       'babel-preset-react',
+      'babel-polyfill',
       'html-webpack-plugin',
-      'extract-text-webpack-plugin@^2.0.0-beta',
+      'extract-text-webpack-plugin',
       'postcss',
       'autoprefixer',
       'node-sass',
       'enzyme',
       'react-addons-test-utils',
-      'cheerio',
       'rimraf',
       'cross-env',
       'jest',
@@ -106,7 +106,8 @@ module.exports = class extends Generator {
       'eslint-plugin-react',
       'eslint-plugin-import',
       'sass-lint',
-      'gh-pages'
+      'gh-pages',
+      'prop-types',
     ];
 
     let isYarnInstalled = true;

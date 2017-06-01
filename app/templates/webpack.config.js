@@ -1,5 +1,3 @@
-'use strict'; // eslint-disable-line
-
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -12,7 +10,7 @@ const config = {
     path: path.join(__dirname, 'src'),
     filename: 'app-bundle.js'
   },
-  devtool: 'cheap-eval-module-source-map',
+  devtool: 'cheap-module-source-map',
   resolve: {
     alias: {
       react$: path.resolve('./node_modules/react')
